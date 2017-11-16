@@ -7,7 +7,9 @@
 	</head>
 	<body>
 		<div ng-controller="index">
-			{{message}}
+			<p>{{message}}</p>
+			<p>Name: <input placeholder="Ex: Jane" type='text' ng-model='name' /></p>
+			<p>My name is {{name}}</p>
 		</div>
 		<script src="root.js"></script>
 	</body>
