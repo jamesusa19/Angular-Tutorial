@@ -8,10 +8,11 @@
 	<body>
 		<div ng-controller="index">
 			<p>{{message}}</p>
-			<p>Name: <input placeholder="Ex: Jane" type='text' ng-model='name' /></p>
-			<p>My name is {{name}}</p>
+			<p>First Name: <input type='text' ng-model='fname' /></p>
+			<p>Last Name: <input type='text' ng-model='lname' /></p>
+			<button ng-click="add()">Submit</button>
 			<p>My friends are:</p>
-			<p ng-repeat="person in names | orderBy: person">{{person}}</p>
+			<p ng-repeat="person in names | orderBy: person">{{listName(person.fname, person.lname)}}</p>
 		</div>
 		<script src="root.js"></script>
 	</body>
