@@ -11,7 +11,7 @@
 			<p>Name: <input placeholder="Ex: Jane" type='text' ng-model='name' /></p>
 			<p>My name is {{name}}</p>
 			<p>My friends are:</p>
-			<p ng-repeat="person in names">{{person}}</p>
+			<p ng-repeat="person in names | orderBy: person">{{person}}</p>
 		</div>
 		<script src="root.js"></script>
 	</body>
