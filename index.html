@@ -14,6 +14,11 @@
 			<p>My friends are:</p>
 			<p ng-repeat="person in names | orderBy: person">{{listName(person.fname, person.lname)}}</p>
 		</div>
+		<div ng-init="list = [{name:'Scott', age: 29}, {name:'James',age:22}]">
+			<ul>
+				<li ng-repeat="item in list">{{item.name}} - {{item.age}}</li>
+			</ul>
+		</div>
 		<script src="root.js"></script>
 	</body>
 </html>
