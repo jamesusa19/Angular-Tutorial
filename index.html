@@ -7,18 +7,15 @@
 	</head>
 	<body>
 		<div ng-controller="index">
-			<p>{{message}}</p>
-			<p>First Name: <input type='text' ng-model='fname' /></p>
-			<p>Last Name: <input type='text' ng-model='lname' /></p>
-			<button ng-click="add()">Submit</button>
-			<p>My friends are:</p>
-			<p ng-repeat="person in names | orderBy: person">{{listName(person.fname, person.lname)}}</p>
-		</div>
-		<div ng-controller="index">
 			<input type="text" ng-model="search">
 			<ul>
 				<li ng-repeat="item in list | filter:search">{{item.name}} - {{item.age}}</li>
 			</ul>
+			<form ng-submit="addPerson()">
+				<input type="text" placeholder="Name" ng-model="name">
+				<input type="text" placeholder="Age" ng-model="age">
+				<input type="submit" value="Submit">
+			</form>
 		</div>
 		<script src="root.js"></script>
 	</body>
